@@ -296,7 +296,7 @@ img {
   fill: rgba(175, 177, 184, 1);
   width: 20px;
   height: 20px;
-  transition: fill 250ms linear;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-list-link:hover .social-list-icon,
 .social-list-link:focus .social-list-icon {
@@ -342,7 +342,7 @@ img {
   fill: rgba(175, 177, 184, 1);
   width: 106px;
   height: 60px;
-  transition: fill 250ms linear;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-list-link:hover .client-list-icon,
 .client-list-link:focus .client-list-icon {
@@ -431,6 +431,7 @@ img {
   box-shadow: 0px 1px 2px 0px #00000014;
 
   box-shadow: 0px 3px 1px 0px #0000001a;
+  /* outline: none; */
 }
 .button {
   padding: 6px 22px;
@@ -444,7 +445,8 @@ img {
   border-radius: 4px;
   overflow: hidden;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects {
@@ -457,6 +459,10 @@ img {
   margin-left: 30px;
   margin-top: 30px;
   flex-basis: calc((100% - 90px) / 3);
+}
+.project-link {
+  display: block;
+  box-sizing: border-box;
 }
 .project-img-wraper {
   position: relative;
@@ -488,8 +494,8 @@ img {
   font-size: 18px;
   line-height: 2;
 }
-.project-item:hover,
-.project-item:focus {
+.project-link:hover,
+.project-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
   cursor: pointer;
@@ -506,6 +512,8 @@ img {
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 100;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal {
   position: absolute;
