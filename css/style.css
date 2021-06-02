@@ -10,6 +10,7 @@
   --card-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   --project-description-border: 1px solid rgb(238, 238, 238);
+  --transmission-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 h1,
 h2,
@@ -107,7 +108,7 @@ img {
   margin-right: 50px;
 }
 .nav-link {
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--transmission-function);
 }
 .nav-link:hover,
 .nav-link:focus {
@@ -123,14 +124,14 @@ img {
   width: 16px;
   height: 12px;
   margin-right: 10px;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms var(--transmission-function);
 }
 .smartphone-icon {
   fill: var(--description-color);
   width: 10px;
   height: 16px;
   margin-right: 10px;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms var(--transmission-function);
 }
 .header-contacts {
   display: flex;
@@ -139,7 +140,7 @@ img {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.17;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--transmission-function);
 }
 .header-contacts:hover,
 .header-contacts:focus {
@@ -193,7 +194,7 @@ img {
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms var(--transmission-function);
 }
 
 .secondary {
@@ -301,7 +302,7 @@ img {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms var(--transmission-function);
 }
 .social-list-link:hover,
 .social-list-link:focus {
@@ -311,7 +312,7 @@ img {
   fill: rgba(175, 177, 184, 1);
   width: 20px;
   height: 20px;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms var(--transmission-function);
 }
 .social-list-link:hover .social-list-icon,
 .social-list-link:focus .social-list-icon {
@@ -347,7 +348,7 @@ img {
   height: 92px;
   border: 1px solid rgba(175, 177, 184, 1);
   border-radius: 4px;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms var(--transmission-function);
 }
 .client-list-link:hover,
 .client-list-link:focus {
@@ -357,7 +358,7 @@ img {
   fill: rgba(175, 177, 184, 1);
   width: 106px;
   height: 60px;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms var(--transmission-function);
 }
 .client-list-link:hover .client-list-icon,
 .client-list-link:focus .client-list-icon {
@@ -411,7 +412,7 @@ img {
   height: 44px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms var(--transmission-function);
 }
 .footer-social-list-link:hover,
 .footer-social-list-link:focus {
@@ -459,9 +460,9 @@ img {
   border: 0;
   border-radius: 4px;
   overflow: hidden;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--transmission-function),
+    background-color 250ms var(--transmission-function),
+    box-shadow 250ms var(--transmission-function);
 }
 
 .projects {
@@ -497,7 +498,7 @@ img {
   background-color: rgba(33, 150, 243, 0.9);
   overflow: auto;
   transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms var(--transmission-function);
 }
 .project-description {
   border-right: var(--project-description-border);
@@ -527,8 +528,8 @@ img {
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 100;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms var(--transmission-function),
+    visibility 250ms var(--transmission-function);
 }
 .modal {
   position: absolute;
